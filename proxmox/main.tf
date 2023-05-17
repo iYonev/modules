@@ -31,7 +31,7 @@ resource "proxmox_vm_qemu" "virtual_machines" {
   cores            = each.value.cores
 # ipconfig0        = "ip=${each.value.ip_address}/32,gw=${each.value.gateway}"
   automatic_reboot = each.value.automatic_reboot
-  vm_id            = each.value.vm_id
+  vmid            = each.value.vm_id
 
   disk {
     storage      = each.value.storage
