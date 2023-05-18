@@ -29,7 +29,7 @@ resource "proxmox_vm_qemu" "virtual_machines" {
   memory           = each.value.memory
   sockets          = each.value.socket
   cores            = each.value.cores
-  ipconfig0        = "ip=${each.value.ip_address}/22,gw=${each.value.gateway}"
+  #ipconfig0        = "ip=${each.value.ip_address}/22,gw=${each.value.gateway}"
   automatic_reboot = each.value.automatic_reboot
   vmid            = each.value.vm_id
 
